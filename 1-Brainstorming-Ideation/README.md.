@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketSmart AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+    <h1>💰 PocketSmart AI</h1>
+    <p>Your Smart Budget & Recommendation Assistant</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="budget.html">Budget</a>
+    <a href="recommendations.html">Recommendations</a>
+</nav>
+
+<section class="hero">
+    <h2>Manage Your Money Smarter</h2>
+    <p>
+        PocketSmart AI helps you track expenses,
+        manage your budget and make better financial decisions.
+    </p>
+
+    <a href="budget.html" class="button">Start Budget Planning</a>
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <h3>📊 Track Expenses</h3>
+        <p>Keep track of your daily and monthly expenses.</p>
+    </div>
+
+    <div class="card">
+        <h3>💰 Smart Budget</h3>
+        <p>Calculate your spending and remaining balance.</p>
+    </div>
+
+    <div class="card">
+        <h3>🤖 AI Recommendations</h3>
+        <p>Get simple suggestions based on your spending.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>©️ 2026 PocketSmart AI</p>
+</footer>
+
+</body>
+</html>
