@@ -1,54 +1,38 @@
-function getRecommendation() {
+function calculateBudget() {
 
-    let income =
-        Number(document.getElementById("recIncome").value);
+    let income = Number(document.getElementById("income").value);
 
-    let expenses =
-        Number(document.getElementById("recExpenses").value);
+    let food = Number(document.getElementById("food").value);
 
-    let result =
-        document.getElementById("recommendation");
+    let transport =
+        Number(document.getElementById("transport").value);
 
-    if (income <= 0 || expenses < 0) {
+    let shopping =
+        Number(document.getElementById("shopping").value);
 
-        result.innerText =
-            "⚠️ Please enter valid income and expense values.";
+    let entertainment =
+        Number(document.getElementById("entertainment").value);
 
+    if (income <= 0) {
+        alert("Please enter your monthly income.");
         return;
     }
 
-    let percentage =
-        (expenses / income) * 100;
+    let totalExpenses =
+        food + transport + shopping + entertainment;
 
-    if (expenses > income) {
+    let remaining =
+        income - totalExpenses;
 
-        result.innerText =
-            "⚠️ Your expenses are higher than your income. " +
-            "Try reducing unnecessary spending and create a strict budget.";
+    let savings =
+        income * 0.20;
 
-    }
+    document.getElementById("total").innerText =
+        "₹" + totalExpenses.toFixed(2);
 
-    else if (percentage > 80) {
+    document.getElementById("remaining").innerText =
+        "₹" + remaining.toFixed(2);
 
-        result.innerText =
-            "💡 You are using more than 80% of your income. " +
-            "Try reducing unnecessary expenses and increase your savings.";
-
-    }
-
-    else if (percentage > 50) {
-
-        result.innerText =
-            "📊 Your spending is moderate. " +
-            "Try to save at least 20% of your income every month.";
-
-    }
-
-    else {
-
-        result.innerText =
-            "🎉 Great job! Your expenses are under control. " +
-            "You can increase your savings or work towards your financial goals.";
-
-    }
+    document.getElementById("savings").innerText =
+        "₹" + savings.toFixed(2);
 }
